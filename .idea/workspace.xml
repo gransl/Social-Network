@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/DictionaryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/DictionaryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/HeapPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/HeapPriorityQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/LinkedListWithIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/LinkedListWithIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/LinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/LinkedQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/LinkedStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/LinkedStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/ListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/ListInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/ListWithIteratorInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/ListWithIteratorInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/MaxHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/MaxHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/MaxHeapInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/MaxHeapInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/PriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/PriorityQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/PriorityQueueInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/PriorityQueueInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/QueueInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/QueueInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/StackInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/StackInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/ADTPackage/UnsortedLinkedDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/UnsortedLinkedDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/BasicGraphInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/BasicGraphInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/GraphAlgorithmsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/GraphAlgorithmsInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/GraphInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/GraphInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/UndirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/UndirectedGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/GraphPackage/VertexInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/VertexInterface.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2pEWkJGepnRNYkICNjJ4xs19Scd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ren/Documents/CS/AD325/AD325-P4-SocialNetwork",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="" />
+      <created>1728925836223</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728925836223</updated>
+      <workItem from="1728925898661" duration="62000" />
+      <workItem from="1732331858020" duration="760000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

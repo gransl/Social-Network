@@ -1,7 +1,5 @@
 package GraphPackage;
 
-
-
 import ADTPackage.LinkedListWithIterator;
 import ADTPackage.ListWithIteratorInterface;
 
