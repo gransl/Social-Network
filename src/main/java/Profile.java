@@ -60,6 +60,16 @@ public class Profile {
     }
 
     /**
+     * This method displays the profile information
+     */
+    public void displayInformation() {
+        System.out.println("Name: " + name);
+        System.out.println("Picture: " + picture);
+        System.out.println("Status: " + status);
+        System.out.println("Friends: " + friendsList);
+    }
+
+    /**
      * toSting method
      * @return String containing profile information
      */

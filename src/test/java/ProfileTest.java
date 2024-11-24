@@ -63,9 +63,20 @@ class ProfileTest {
 
     @Test
     void addFriend() {
+        assertTrue(profileOne.getFriendsList().isEmpty());
+
         profileOne.addFriend("Angela");
         profileOne.addFriend("Bob");
         profileOne.addFriend("Sara");
+
+        assertFalse(profileOne.getFriendsList().isEmpty());
+        assertEquals(3, profileOne.getFriendsList().size());
+
+        profileOne.addFriend("Angela");
+        assertEquals(3, profileOne.getFriendsList().size());
+
+        profileOne.addFriend(null);
+        assertEquals(3, profileOne.getFriendsList().size());
 
         assertEquals("Angela",profileOne.getFriendsList().get(0));
         assertEquals("Bob",profileOne.getFriendsList().get(1));
@@ -86,6 +97,5 @@ class ProfileTest {
         assertTrue(toString.contains("Angela"));
         assertTrue(toString.contains("Bob"));
         assertTrue(toString.contains("Sara"));
-
     }
 }

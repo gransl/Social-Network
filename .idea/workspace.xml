@@ -5,42 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProfileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/DictionaryInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/DictionaryInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/HeapPriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/HeapPriorityQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedListWithIterator$IteratorForLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedListWithIterator$IteratorForLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedListWithIterator$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedListWithIterator$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedListWithIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedListWithIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedQueue$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedQueue$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedStack$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedStack$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/LinkedStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/ListInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/ListInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/ListWithIteratorInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/ListWithIteratorInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/MaxHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/MaxHeap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/MaxHeapInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/MaxHeapInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/PriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/PriorityQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/PriorityQueueInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/PriorityQueueInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/QueueInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/QueueInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/StackInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/StackInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary$KeyIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary$KeyIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary$ValueIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary$ValueIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/ADTPackage/UnsortedLinkedDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/BasicGraphInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/BasicGraphInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/DirectedGraph$EntryPQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/DirectedGraph$EntryPQ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/DirectedGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/DirectedGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/GraphAlgorithmsInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/GraphAlgorithmsInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/GraphInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/GraphInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/UndirectedGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/UndirectedGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex$Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex$Edge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex$NeighborIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex$NeighborIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex$WeightIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex$WeightIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/Vertex.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/VertexInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/GraphPackage/VertexInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/AD325-P4-SocialNetwork/ProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/AD325-P4-SocialNetwork/ProfileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProfileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +55,8 @@
     "Application.temp.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.All in AD325-P4-SocialNetwork.executor": "Run",
+    "JUnit.ProfileTest.addFriend.executor": "Run",
+    "JUnit.ProfileTest.executor": "Run",
     "JUnit.ProfileTest.getFriendsList.executor": "Run",
     "JUnit.ProfileTest.getName.executor": "Run",
     "JUnit.ProfileTest.getPicture.executor": "Run",
@@ -152,11 +123,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProfileTest.setName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.addFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ProfileTest" />
-      <option name="METHOD_NAME" value="setName" />
+      <option name="METHOD_NAME" value="addFriend" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -195,10 +166,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProfileTest" />
+        <item itemvalue="JUnit.ProfileTest.addFriend" />
         <item itemvalue="JUnit.ProfileTest.testToString" />
         <item itemvalue="JUnit.ProfileTest.setStatus" />
         <item itemvalue="JUnit.ProfileTest.setPicture" />
-        <item itemvalue="JUnit.ProfileTest.setName" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +191,7 @@
       <updated>1728925836223</updated>
       <workItem from="1728925898661" duration="62000" />
       <workItem from="1732331858020" duration="13635000" />
-      <workItem from="1732401095272" duration="4223000" />
+      <workItem from="1732401095272" duration="7176000" />
     </task>
     <servers />
   </component>
