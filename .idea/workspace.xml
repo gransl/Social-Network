@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/screenshots/vc-ss-sandra-1-vertex-test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/VertexTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AD325-P4-SocialNetwork.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AD325-P4-SocialNetwork.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ADTPackage/ListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ADTPackage/ListInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/AD325-P4-SocialNetwork/ProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/AD325-P4-SocialNetwork/ProfileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProfileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -29,9 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SkyeHobbs"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gransl/AD325-P4-SocialNetwork.git",
+    "accountId": "d6a183c0-fc78-42ed-9b4b-5adad3be15d0"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2pEWkJGepnRNYkICNjJ4xs19Scd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,8 +52,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.temp.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.All in AD325-P4-SocialNetwork.executor": "Run",
+    "JUnit.ProfileTest.addFriend.executor": "Run",
+    "JUnit.ProfileTest.executor": "Run",
+    "JUnit.ProfileTest.getFriendsList.executor": "Run",
+    "JUnit.ProfileTest.getName.executor": "Run",
+    "JUnit.ProfileTest.getPicture.executor": "Run",
+    "JUnit.ProfileTest.getStatus.executor": "Run",
+    "JUnit.ProfileTest.setName.executor": "Run",
+    "JUnit.ProfileTest.setPicture.executor": "Run",
+    "JUnit.ProfileTest.setStatus.executor": "Run",
+    "JUnit.ProfileTest.testToString.executor": "Run",
     "JUnit.VertexTest.connectNoWeight.executor": "Coverage",
     "JUnit.VertexTest.display.executor": "Coverage",
     "JUnit.VertexTest.executor": "Coverage",
@@ -61,9 +85,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "vertex-test",
+    "git-widget-placeholder": "profile-classAndTest",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/ren/Documents/CS/AD325/AD325-P4-SocialNetwork",
+    "last_opened_file_path": "/Users/student/Desktop/BSCS/AD325/AD325-P4-SocialNetwork",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,84 +109,55 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
       <recent name="GraphPackage" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VertexTest.display">
-    <configuration name="VertexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProfileTest">
+    <configuration name="ProfileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GraphPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.VertexTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VertexTest.display" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.addFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GraphPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.VertexTest" />
-      <option name="METHOD_NAME" value="display" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="METHOD_NAME" value="addFriend" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VertexTest.getNeighborIterator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.setPicture" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GraphPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.VertexTest" />
-      <option name="METHOD_NAME" value="getNeighborIterator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="METHOD_NAME" value="setPicture" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VertexTest.getUnvisitedNeighbor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.setStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GraphPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.VertexTest" />
-      <option name="METHOD_NAME" value="getUnvisitedNeighbor" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="METHOD_NAME" value="setStatus" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VertexTest.hasNeighbor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfileTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GraphPackage.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.VertexTest" />
-      <option name="METHOD_NAME" value="hasNeighbor" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,19 +165,19 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.VertexTest.display" />
-        <item itemvalue="JUnit.VertexTest" />
-        <item itemvalue="JUnit.VertexTest.getUnvisitedNeighbor" />
-        <item itemvalue="JUnit.VertexTest.getNeighborIterator" />
-        <item itemvalue="JUnit.VertexTest.hasNeighbor" />
+        <item itemvalue="JUnit.ProfileTest" />
+        <item itemvalue="JUnit.ProfileTest.addFriend" />
+        <item itemvalue="JUnit.ProfileTest.testToString" />
+        <item itemvalue="JUnit.ProfileTest.setStatus" />
+        <item itemvalue="JUnit.ProfileTest.setPicture" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -196,11 +191,23 @@
       <updated>1728925836223</updated>
       <workItem from="1728925898661" duration="62000" />
       <workItem from="1732331858020" duration="13635000" />
+      <workItem from="1732401095272" duration="7176000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_connectNoWeight.ic" NAME="VertexTest.connectNoWeight Coverage Results" MODIFIED="1732342010950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
