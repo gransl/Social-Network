@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GraphPackage/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GraphPackage/DirectedGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/DirectedGraphTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GraphPackage/VertexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/VertexTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/UndirectedGraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,58 +36,59 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.All in AD325-P4-SocialNetwork.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.addEdge.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.addVertex.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.clear.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.displayEdges.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.getBreadthFirstTraversal.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.getCheapestPath.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.getDepthFirstTraversal.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.getShortestPath.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DirectedGraphTest.getTopologicalOrder.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.hasEdge.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.DirectedGraphTest.testToString.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VertexTest.connectNoWeight.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.display.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.getAndSetCost.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.getLabel.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.getNeighborIterator.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.getPredecessor.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.getUnvisitedNeighbor.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.getWeightIterator.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.hasNeighbor.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.hasUnvisitedNeighbor.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.setAndHasPredecessor.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.testEquals.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.testToString.executor&quot;: &quot;Coverage&quot;,
-    &quot;JUnit.VertexTest.visitUnvisitAndIsVisited.executor&quot;: &quot;Coverage&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;directed-and-undirected-graph-test&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ren/Documents/CS/AD325/AD325-P4-SocialNetwork&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in AD325-P4-SocialNetwork.executor": "Coverage",
+    "JUnit.DirectedGraphTest.addEdge.executor": "Coverage",
+    "JUnit.DirectedGraphTest.addVertex.executor": "Coverage",
+    "JUnit.DirectedGraphTest.clear.executor": "Coverage",
+    "JUnit.DirectedGraphTest.displayEdges.executor": "Coverage",
+    "JUnit.DirectedGraphTest.executor": "Coverage",
+    "JUnit.DirectedGraphTest.getBreadthFirstTraversal.executor": "Coverage",
+    "JUnit.DirectedGraphTest.getCheapestPath.executor": "Coverage",
+    "JUnit.DirectedGraphTest.getDepthFirstTraversal.executor": "Coverage",
+    "JUnit.DirectedGraphTest.getShortestPath.executor": "Run",
+    "JUnit.DirectedGraphTest.getTopologicalOrder.executor": "Coverage",
+    "JUnit.DirectedGraphTest.hasEdge.executor": "Coverage",
+    "JUnit.DirectedGraphTest.testToString.executor": "Run",
+    "JUnit.UndirectedGraphTest.executor": "Coverage",
+    "JUnit.VertexTest.connectNoWeight.executor": "Coverage",
+    "JUnit.VertexTest.display.executor": "Coverage",
+    "JUnit.VertexTest.executor": "Coverage",
+    "JUnit.VertexTest.getAndSetCost.executor": "Coverage",
+    "JUnit.VertexTest.getLabel.executor": "Coverage",
+    "JUnit.VertexTest.getNeighborIterator.executor": "Coverage",
+    "JUnit.VertexTest.getPredecessor.executor": "Coverage",
+    "JUnit.VertexTest.getUnvisitedNeighbor.executor": "Coverage",
+    "JUnit.VertexTest.getWeightIterator.executor": "Coverage",
+    "JUnit.VertexTest.hasNeighbor.executor": "Coverage",
+    "JUnit.VertexTest.hasUnvisitedNeighbor.executor": "Coverage",
+    "JUnit.VertexTest.setAndHasPredecessor.executor": "Coverage",
+    "JUnit.VertexTest.testEquals.executor": "Coverage",
+    "JUnit.VertexTest.testToString.executor": "Coverage",
+    "JUnit.VertexTest.visitUnvisitAndIsVisited.executor": "Coverage",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "directed-and-undirected-graph-test",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ren/Documents/CS/AD325/AD325-P4-SocialNetwork",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/screenshots" />
@@ -104,7 +101,7 @@
       <recent name="GraphPackage" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in AD325-P4-SocialNetwork">
+  <component name="RunManager" selected="JUnit.UndirectedGraphTest">
     <configuration name="All in AD325-P4-SocialNetwork" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
       <option name="PACKAGE_NAME" value="" />
@@ -144,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectedGraphTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UndirectedGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
       <extension name="coverage">
         <pattern>
@@ -153,9 +150,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.DirectedGraphTest" />
-      <option name="METHOD_NAME" value="testToString" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="GraphPackage.UndirectedGraphTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UndirectedGraphTest" />
         <item itemvalue="JUnit.All in AD325-P4-SocialNetwork" />
         <item itemvalue="JUnit.DirectedGraphTest.getBreadthFirstTraversal" />
         <item itemvalue="JUnit.VertexTest.hasUnvisitedNeighbor" />
         <item itemvalue="JUnit.DirectedGraphTest" />
-        <item itemvalue="JUnit.DirectedGraphTest.testToString" />
       </list>
     </recent_temporary>
   </component>
@@ -205,27 +201,12 @@
       <workItem from="1728925898661" duration="62000" />
       <workItem from="1732331858020" duration="13635000" />
       <workItem from="1732418965001" duration="15980000" />
-      <workItem from="1732489519629" duration="8925000" />
+      <workItem from="1732489519629" duration="9593000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java</url>
-          <line>92</line>
-          <properties class="GraphPackage.DirectedGraph" method="getBreadthFirstTraversal">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$DirectedGraphTest_addEdge.ic" NAME="DirectedGraphTest.addEdge Coverage Results" MODIFIED="1732430338966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -255,9 +236,6 @@
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$DirectedGraphTest_getBreadthFirstTraversal.ic" NAME="DirectedGraphTest.getBreadthFirstTraversal Coverage Results" MODIFIED="1732498933791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>GraphPackage.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$UndirectedGraphTest.ic" NAME="UndirectedGraphTest Coverage Results" MODIFIED="1732499736762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>GraphPackage.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$DirectedGraphTest_displayEdges.ic" NAME="DirectedGraphTest.displayEdges Coverage Results" MODIFIED="1732438436043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>GraphPackage.*</FILTER>
     </SUITE>
@@ -270,7 +248,7 @@
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$DirectedGraphTest_getShortestPath.ic" NAME="DirectedGraphTest.getShortestPath Coverage Results" MODIFIED="1732436723362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>GraphPackage.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$All_in_AD325_P4_SocialNetwork.ic" NAME="All in AD325-P4-SocialNetwork Coverage Results" MODIFIED="1732512260624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$All_in_AD325_P4_SocialNetwork.ic" NAME="All in AD325-P4-SocialNetwork Coverage Results" MODIFIED="1732498943352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getWeightIterator.ic" NAME="VertexTest.getWeightIterator Coverage Results" MODIFIED="1732343395886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>GraphPackage.*</FILTER>
     </SUITE>
