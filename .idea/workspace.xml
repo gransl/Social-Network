@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GraphPackage/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GraphPackage/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GraphPackage/DirectedGraphTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/DirectedGraphTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GraphPackage/VertexTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/VertexTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/GraphPackage/UndirectedGraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,7 @@
     "JUnit.DirectedGraphTest.getTopologicalOrder.executor": "Coverage",
     "JUnit.DirectedGraphTest.hasEdge.executor": "Coverage",
     "JUnit.DirectedGraphTest.testToString.executor": "Run",
+    "JUnit.UndirectedGraphTest.executor": "Coverage",
     "JUnit.VertexTest.connectNoWeight.executor": "Coverage",
     "JUnit.VertexTest.display.executor": "Coverage",
     "JUnit.VertexTest.executor": "Coverage",
@@ -104,7 +101,7 @@
       <recent name="GraphPackage" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in AD325-P4-SocialNetwork">
+  <component name="RunManager" selected="JUnit.UndirectedGraphTest">
     <configuration name="All in AD325-P4-SocialNetwork" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
       <option name="PACKAGE_NAME" value="" />
@@ -144,7 +141,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectedGraphTest.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UndirectedGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AD325-P4-SocialNetwork" />
       <extension name="coverage">
         <pattern>
@@ -153,9 +150,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="GraphPackage" />
-      <option name="MAIN_CLASS_NAME" value="GraphPackage.DirectedGraphTest" />
-      <option name="METHOD_NAME" value="testToString" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="GraphPackage.UndirectedGraphTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UndirectedGraphTest" />
         <item itemvalue="JUnit.All in AD325-P4-SocialNetwork" />
         <item itemvalue="JUnit.DirectedGraphTest.getBreadthFirstTraversal" />
         <item itemvalue="JUnit.VertexTest.hasUnvisitedNeighbor" />
         <item itemvalue="JUnit.DirectedGraphTest" />
-        <item itemvalue="JUnit.DirectedGraphTest.testToString" />
       </list>
     </recent_temporary>
   </component>
@@ -205,27 +201,12 @@
       <workItem from="1728925898661" duration="62000" />
       <workItem from="1732331858020" duration="13635000" />
       <workItem from="1732418965001" duration="15980000" />
-      <workItem from="1732489519629" duration="8925000" />
+      <workItem from="1732489519629" duration="9593000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/GraphPackage/DirectedGraph.java</url>
-          <line>92</line>
-          <properties class="GraphPackage.DirectedGraph" method="getBreadthFirstTraversal">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$DirectedGraphTest_addEdge.ic" NAME="DirectedGraphTest.addEdge Coverage Results" MODIFIED="1732430338966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
