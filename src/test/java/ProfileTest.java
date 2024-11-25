@@ -3,6 +3,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProfileTest {
@@ -47,6 +50,8 @@ class ProfileTest {
     void setName() {
         profileOne.setName("Fred");
         assertEquals("Fred",profileOne.getName());
+        assertThrows(IllegalArgumentException.class, () -> profileOne.setName(""));
+        assertThrows(IllegalArgumentException.class, () -> profileOne.setName(null));
     }
 
     @Test
@@ -59,6 +64,8 @@ class ProfileTest {
     void setStatus() {
         profileOne.setStatus("OFFLINE");
         assertEquals("OFFLINE",profileOne.getStatus());
+        assertThrows(IllegalArgumentException.class, () -> profileOne.setStatus(""));
+        assertThrows(IllegalArgumentException.class, () -> profileOne.setStatus(null));
     }
 
     @Test
@@ -81,6 +88,13 @@ class ProfileTest {
         assertEquals("Angela",profileOne.getFriendsList().get(0));
         assertEquals("Bob",profileOne.getFriendsList().get(1));
         assertEquals("Sara",profileOne.getFriendsList().get(2));
+
+        profileOne.addFriend("");
+        assertEquals(3, profileOne.getFriendsList().size());
+
+        assertEquals("Angela",profileOne.getFriendsList().get(0));
+        assertEquals("Bob",profileOne.getFriendsList().get(1));
+        assertEquals("Sara",profileOne.getFriendsList().get(2));
     }
 
     @Test
@@ -97,5 +111,29 @@ class ProfileTest {
         assertTrue(toString.contains("Angela"));
         assertTrue(toString.contains("Bob"));
         assertTrue(toString.contains("Sara"));
+    }
+
+    @Test
+    void displayInformation() {
+        profileOne.addFriend("Angela");
+
+        //Save original out
+        PrintStream originalOut = System.out;
+
+        // Create ByteArrayOutputStream to capture the output
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        PrintStream testOut =  new PrintStream(outputStream);
+
+        // Redirect System.out to testOut
+        System.setOut(testOut);
+
+        // Run method that prints code we want to test
+        profileOne.displayInformation();
+
+        // Restore original System.out
+        System.setOut(System.out);
+
+        String testOutString = outputStream.toString();
+        assertEquals("Name: Jim\nPicture: Jim.PNG\nStatus: ONLINE\nFriends: [Angela]\n", testOutString);
     }
 }
