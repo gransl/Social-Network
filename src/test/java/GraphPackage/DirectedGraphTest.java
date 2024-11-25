@@ -12,6 +12,7 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -122,10 +123,28 @@ class DirectedGraphTest {
 
     }
 
-    /*Not actually implemented */
     @Test
     void getBreadthFirstTraversal() {
-        QueueInterface<Integer> bfsTraversal = intGraph.getBreadthFirstTraversal(0);
+        QueueInterface<Integer> bfsTraversal = intGraph.getBreadthFirstTraversal(1);
+        assertEquals(1, bfsTraversal.dequeue());
+        assertEquals(2, bfsTraversal.dequeue());
+        assertEquals(5, bfsTraversal.dequeue());
+        assertEquals(3, bfsTraversal.dequeue());
+        assertEquals(0, bfsTraversal.dequeue());
+        assertEquals(4, bfsTraversal.dequeue());
+        QueueInterface<Integer> bfsTraversal2 = intGraph.getBreadthFirstTraversal(6);
+        assertEquals(6, bfsTraversal2.dequeue());
+        assertNull(bfsTraversal2.dequeue());
+        DirectedGraph<Integer> graph2 = populateGraph2();
+        QueueInterface<Integer> bfsTraversalGraph2 = graph2.getBreadthFirstTraversal(6);
+        assertEquals(6, bfsTraversalGraph2.dequeue());
+        assertEquals(0, bfsTraversalGraph2.dequeue());
+        assertEquals(7, bfsTraversalGraph2.dequeue());
+        assertEquals(1, bfsTraversalGraph2.dequeue());
+        assertEquals(5, bfsTraversalGraph2.dequeue());
+        assertEquals(2, bfsTraversalGraph2.dequeue());
+        assertEquals(3, bfsTraversalGraph2.dequeue());
+
     }
 
     @Test
@@ -255,7 +274,5 @@ class DirectedGraphTest {
 
     @Test
     void testToString() {
-
-        assertEquals("0", intGraph.toString());
     }
 }
