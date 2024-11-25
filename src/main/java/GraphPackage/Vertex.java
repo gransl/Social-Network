@@ -170,6 +170,8 @@ class Vertex<T> implements VertexInterface<T>
         return result;
     } // end getUnvisitedNeighbor
 
+
+
     public boolean equals(Object other)
     {
         boolean result;
