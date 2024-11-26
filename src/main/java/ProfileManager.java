@@ -1,8 +1,10 @@
+import ADTPackage.QueueInterface;
 import ADTPackage.UnsortedLinkedDictionary;
 import GraphPackage.UndirectedGraph;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Queue;
 
 public class ProfileManager {
     private UnsortedLinkedDictionary<String, Profile> users;
@@ -111,28 +113,22 @@ public class ProfileManager {
         }
     }
 
-    public void displayAllFriends() {
-        Iterator<String> keyIterator = users.getKeyIterator();
+    public void displayAllFriends(String originName) {
+        QueueInterface<String>  traversalOrder = socialNetwork.getBreadthFirstTraversal(originName);
 
-        while (keyIterator.hasNext()) {
-            String key = keyIterator.next();
-            Profile profile = users.getValue(key);
+        while (!traversalOrder.isEmpty()) {
+            String name = traversalOrder.dequeue();
+            Profile profile = users.getValue(name);
             ArrayList<String> friends = profile.getFriendsList();
-
-            System.out.println(key + " Friends:");
-            if (!friends.isEmpty()) {
-                for (int i = 0; i < friends.size(); i++) {
-                    if (i > 0) {
-                        System.out.print(", ");
-                    }
-                    System.out.print(friends.get(i));
+            System.out.println(name + " Friends:");
+            for (int i = 0; i < friends.size(); i++) {
+                if (i > 0) {
+                    System.out.print(", ");
                 }
-                System.out.println();
-                System.out.println();
-            } else {
-                System.out.println("No friends");
-                System.out.println();
+                System.out.print(friends.get(i));
             }
+            System.out.println();
+            System.out.println();
         }
     }
 }
