@@ -120,6 +120,7 @@ public class ProfileManager {
             String name = traversalOrder.dequeue();
             Profile profile = users.getValue(name);
             ArrayList<String> friends = profile.getFriendsList();
+
             System.out.println(name + " Friends:");
             for (int i = 0; i < friends.size(); i++) {
                 if (i > 0) {
