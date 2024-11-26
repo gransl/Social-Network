@@ -79,14 +79,6 @@ public class ProfileManager {
         return false;
     }
 
-    public UnsortedLinkedDictionary<String, Profile> getUsers() {
-        return users;
-    }
-
-    public UndirectedGraph<String> getSocialNetwork() {
-        return socialNetwork;
-    }
-
     public void displayProfiles() {
         Iterator<String> keyIterator = users.getKeyIterator();
 
@@ -156,5 +148,9 @@ public class ProfileManager {
             System.out.println();
             System.out.println();
         }
+    }
+
+    public Iterator<String> getNameIterator() {
+        return users.getKeyIterator();
     }
 }
