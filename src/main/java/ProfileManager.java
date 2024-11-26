@@ -32,15 +32,15 @@ public class ProfileManager {
         addProfile(scarlet);
         addProfile(boddy);
 
-        createFriendship(mustard, plum);
-        createFriendship(mustard, green);
-        createFriendship(mustard, scarlet);
+        createFriendship(mustard.getName(), plum.getName());
+        createFriendship(mustard.getName(), green.getName());
+        createFriendship(mustard.getName(), scarlet.getName());
 
-        createFriendship(plum, green);
+        createFriendship(plum.getName(), green.getName());
 
-        createFriendship(green, white);
+        createFriendship(green.getName(), white.getName());
 
-        createFriendship(scarlet, peacock);
+        createFriendship(scarlet.getName(), peacock.getName());
     }
 
     public boolean addProfile(Profile profile) {
@@ -52,14 +52,39 @@ public class ProfileManager {
         return false;
     }
 
-    public boolean createFriendship(Profile profile1, Profile profile2) {
-        if(users.contains(profile1.getName()) && users.contains(profile2.getName())) {
-            socialNetwork.addEdge(profile1.getName(), profile2.getName());
-            profile1.addFriend(profile2.getName());
-            profile2.addFriend(profile1.getName());
+    public boolean removeProfile(String name) {
+        if(users.contains(name)) {
+            Profile profileToRemove = users.getValue(name);
+            ArrayList<String> friendsList = profileToRemove.getFriendsList();
+
+            for (String friend : friendsList) {
+                Profile friendProfile = users.getValue(friend);
+                friendProfile.getFriendsList().remove(name);
+            }
+
+            users.remove(name);
+            socialNetwork.removeVertex(name);
             return true;
         }
         return false;
+    }
+
+    public boolean createFriendship(String name1, String name2) {
+        if(users.contains(name1) && users.contains(name2)) {
+            socialNetwork.addEdge(name1, name2);
+            users.getValue(name1).addFriend(name2);
+            users.getValue(name2).addFriend(name1);
+            return true;
+        }
+        return false;
+    }
+
+    public UnsortedLinkedDictionary<String, Profile> getUsers() {
+        return users;
+    }
+
+    public UndirectedGraph<String> getSocialNetwork() {
+        return socialNetwork;
     }
 
     public void displayProfiles() {
