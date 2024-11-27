@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -20,6 +22,7 @@ public class Main {
         //menu
         do {
             System.out.println();
+            System.out.println("--- Social Network! ---");
             System.out.println("Current user: " + currentUser);
             System.out.println("Choose from the following options: ");
             System.out.println();
@@ -102,15 +105,18 @@ public class Main {
                 System.out.print("Choose an option 1-3 or 0 to quit: ");
             }
 
+            modifyMode = console.nextInt();
+            System.out.println();
+
             switch (modifyMode) {
                 case 1:
-                    //TODO: change username
+                    changeName(user, console, socialNetwork);
                     break;
                 case 2:
-                    //TODO: change profile picture
+                    changePicture(user, console, socialNetwork);
                     break;
                 case 3:
-                    //TODO: change current status
+                    changeStatus(user, console, socialNetwork);
                     break;
                 case 0:
                     break;
@@ -122,31 +128,90 @@ public class Main {
 
     }
 
-    //TODO: Not Finished
+    private static void changeName(String user, Scanner console, ProfileManager socialNetwork) {
+        ArrayList<String> allUsers = socialNetwork.getAllNamesList();
+        String newName = "";
+        do {
+            System.out.print("New Profile Name: ");
+            newName = console.next();
+            if (newName.isEmpty() || newName == null) {
+                System.out.println("Profile name cannot be empty or null");
+                System.out.print("Enter new profile name or type current profile name (" + user + ") to exit: ");
+            } else if (allUsers.contains(newName)) {
+                System.out.println("This Profile Name already exists in network.");
+                System.out.print("Enter new profile name or type current profile name (" + user + ") to exit: ");
+            }
+        } while (newName.isEmpty() || newName == null || (allUsers.contains(newName) && newName != user));
+
+        Profile userProfile = socialNetwork.getProfile(user);
+        userProfile.setName(newName);
+    }
+
+    private static void changePicture(String user, Scanner console, ProfileManager socialNetwork) {
+        System.out.print("New Picture File Name: ");
+        String newPicture = console.next();
+        Profile userProfile = socialNetwork.getProfile(user);
+        userProfile.setPicture(newPicture);
+    }
+
+    private static void changeStatus(String user, Scanner console, ProfileManager socialNetwork) {
+        String newStatus = "";
+        do {
+            System.out.print("New Profile Name: ");
+            newStatus = console.next();
+            if (newStatus.isEmpty() || newStatus == null) {
+                System.out.println("Profile status cannot be empty or null.");
+                System.out.print("Enter new profile status: ");
+            }
+        } while (newStatus.isEmpty() || newStatus == null);
+
+        Profile userProfile = socialNetwork.getProfile(user);
+        userProfile.setName(newStatus);
+
+    }
+
     public static void addFriend(String user, Scanner console, ProfileManager socialNetwork) {
+        String[] notYetFriends = createNotFriendsList(socialNetwork, user);
+
         System.out.println("--- Add A Friend ---");
         System.out.println("Current Friendships: ");
         socialNetwork.displayCurrentUsersFriends(user);
 
         System.out.println();
         System.out.println();
-        System.out.println("Possible Friends: ");
+
+        if (notYetFriends.length < 1) {
+            System.out.println("You are already friends with everyone in the network!");
+        } else {
+            System.out.println("Possible New Friends: ");
+            System.out.println(Arrays.toString(notYetFriends));
+            System.out.println();
+            System.out.print("Who do you want create a friendship with? ");
+            String friend = console.next();
+            boolean didFriendshipCreate = socialNetwork.createFriendship(user, friend);
+            if (didFriendshipCreate) {
+                System.out.println("Link Successful. " + user + " and " + friend + " are now friends.");
+            } else {
+                System.out.println("Link Unsuccessful. New friend must be an existing user and not currently a friend.");
+            }
+        }
+    }
+
+    private static String[] createNotFriendsList(ProfileManager socialNetwork, String user){
+        // Populate List of Potential New Friends
+        // Does not include self and current friends
+        ArrayList<String> userFriends = socialNetwork.getFriendsList(user);
         Iterator<String> userItr = socialNetwork.getNameIterator();
+        ArrayList<String> notFriends = new ArrayList<>();
+
         while (userItr.hasNext()) {
             String nextUser = userItr.next();
-            if (nextUser != user);
-            //TODO: Need a way to get current user friends list
+            if (nextUser != user && !userFriends.contains(nextUser)) {
+                notFriends.add(nextUser);
+            }
         }
-        System.out.println();
-        System.out.println();
-        System.out.println("Who do you want create a friendship with?" );
-        String friend = console.next();
-        boolean didFriendshipCreate = socialNetwork.createFriendship(user, friend);
-        if (didFriendshipCreate) {
-            System.out.println("Link Successful. " + user + " and " + friend + " are now friends.");
-        } else {
-            System.out.println("Link Unsuccessful. New friend must be an existing user and not currently a friend.");
-        }
+
+        return notFriends.toArray(new String[notFriends.size()]);
     }
 
     //works
@@ -162,9 +227,9 @@ public class Main {
         socialNetwork.displayCurrentUsersFriendsFriends(user);
     }
 
-    //Need to add a way to check that it's also not a current Profile
-    //TODO: Need a way to get all users that is a list.
+
     public static void createProfile(Scanner console, ProfileManager socialNetwork) {
+        ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println("--- Create Profile ---");
         System.out.println();
 
@@ -174,8 +239,10 @@ public class Main {
             name = console.next();
             if (name.isEmpty() || name == null) {
                 System.out.println("Name cannot be empty or null");
+            } else if (allUsers.contains(name)) {
+                System.out.println("Name already exists in network");
             }
-        } while (name.isEmpty() || name == null );
+        } while (name.isEmpty() || name == null || allUsers.contains(name));
 
         System.out.println();
         System.out.print("Picture File Name (Optional, can leave blank)? ");
