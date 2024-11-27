@@ -153,4 +153,32 @@ public class ProfileManager {
     public Iterator<String> getNameIterator() {
         return users.getKeyIterator();
     }
+
+    public Profile getProfile(String name) {
+        return users.getValue(name);
+    }
+
+    public ArrayList<Profile> getFriendsList(String name) {
+        ArrayList<Profile> friendsList = new ArrayList<>();
+        ArrayList<String> friends = users.getValue(name).getFriendsList();
+
+        for (String friend : friends) {
+            Profile friendProfile = users.getValue(friend);
+            friendsList.add(friendProfile);
+        }
+
+        return friendsList;
+    }
+
+    public ArrayList<Profile> getAllProfilesList() {
+        ArrayList<Profile> allProfilesList = new ArrayList<>();
+        Iterator<String> keyIterator = users.getKeyIterator();
+
+        while (keyIterator.hasNext()) {
+            String name = keyIterator.next();
+            Profile profile = users.getValue(name);
+            allProfilesList.add(profile);
+        }
+        return allProfilesList;
+    }
 }
