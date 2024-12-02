@@ -156,7 +156,6 @@ public class ProfileManager {
     public void displayCurrentUsersFriendsFriends(String username) {
         Profile userProfile = users.getValue(username);
         ArrayList<String> userFriends = userProfile.getFriendsList();
-        boolean firstFriend = true;
 
         for (String friend : userFriends) {
             Profile friendProfile = users.getValue(friend);

@@ -23,6 +23,10 @@ public class Profile {
      * @param status status string, cannot be empty or null.
      */
     public Profile(String username, String name, String picture, String status) {
+        if (username == null || username.isEmpty()) {
+            throw new NullPointerException("Username cannot be null or empty");
+        }
+
         this.username = username;
         setName(name);
         this.picture = picture;
