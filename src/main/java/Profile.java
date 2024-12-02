@@ -24,7 +24,7 @@ public class Profile {
      */
     public Profile(String username, String name, String picture, String status) {
         if (username == null || username.isEmpty()) {
-            throw new NullPointerException("Username cannot be null or empty");
+            throw new IllegalArgumentException("Username cannot be null or empty");
         }
 
         this.username = username;
