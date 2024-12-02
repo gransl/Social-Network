@@ -9,9 +9,9 @@ public class Main {
         socialNetwork.populateInitialGraph();
 
         Scanner console = new Scanner(System.in);
-        System.out.println("Welcome to Social Network!");
-        //TODO: add function that asks user to create profile
-        menu(console, "Mustard", socialNetwork);
+        System.out.println("--- Welcome to Social Network! ---");
+        String profileName = createProfile(console, socialNetwork);
+        menu(console, profileName, socialNetwork);
     }
 
     public static void menu(Scanner console, String user, ProfileManager socialNetwork) {
@@ -26,24 +26,27 @@ public class Main {
             System.out.println("Current user: " + currentUser);
             System.out.println("Choose from the following options: ");
             System.out.println();
-            System.out.println("1. Modify your profile");
-            System.out.println("2. Add a friend");
-            System.out.println("3. View your friends list");
-            System.out.println("4. View your friends' friends list");
+            System.out.println("--- Profile Options ---");
+            System.out.println("1. View your profile");
+            System.out.println("2. Modify your profile");
+            System.out.println("3. Add a friend");
+            System.out.println("4. View your friends list");
+            System.out.println("5. View your friends' friends list");
             System.out.println();
-            System.out.println("5. Add a new profile");
-            System.out.println("6. View all profiles");
-            System.out.println("7. Delete a profile");
-            System.out.println("8. Switch current user");
+            System.out.println("--- Admin Options ---");
+            System.out.println("6. Add a new profile");
+            System.out.println("7. View all profiles");
+            System.out.println("8. Delete a profile");
+            System.out.println("9. Switch current user");
             System.out.println();
             System.out.println("0. Logout (exit program)");
-            System.out.print("Choose an option 1-8 or 0 to quit: ");
+            System.out.print("Choose an option 1-9 or 0 to quit: ");
 
             while (!console.hasNextInt()) {
                 console.next();
                 System.out.println();
                 System.out.println("That is not a valid option.");
-                System.out.print("Choose an option 1-8 or 0 to quit: ");
+                System.out.print("Choose an option 1-9 or 0 to quit.");
             }
 
             mode = console.nextInt();
@@ -51,27 +54,30 @@ public class Main {
 
             switch(mode) {
                 case 1:
-                    modifyProfile(currentUser, console, socialNetwork);
+                    viewProfile(currentUser, socialNetwork);
                     break;
                 case 2:
-                    addFriend(currentUser, console, socialNetwork);
+                    modifyProfile(currentUser, console, socialNetwork);
                     break;
                 case 3:
-                    viewFriends(currentUser, socialNetwork);
+                    addFriend(currentUser, console, socialNetwork);
                     break;
                 case 4:
-                    viewFriendsFriends(currentUser, socialNetwork);
+                    viewFriends(currentUser, socialNetwork);
                     break;
                 case 5:
-                    createProfile(console, socialNetwork);
+                    viewFriendsFriends(currentUser, socialNetwork);
                     break;
                 case 6:
-                    viewAllProfiles(socialNetwork);
+                    createProfile(console, socialNetwork);
                     break;
                 case 7:
-                    deleteProfile(console, socialNetwork);
+                    viewAllProfiles(socialNetwork);
                     break;
                 case 8:
+                    deleteProfile(console, socialNetwork);
+                    break;
+                case 9:
                     currentUser = switchUser(console, socialNetwork);
                     break;
                 case 0:
@@ -83,7 +89,12 @@ public class Main {
          } while (mode != 0);
     }
 
-
+    public static void viewProfile(String user, ProfileManager socialNetwork) {
+        System.out.println("--- " + user + "'s Profile ---");
+        Profile currentUser = socialNetwork.getProfile(user);
+        currentUser.displayInformation();
+        System.out.println();
+    }
 
     public static void modifyProfile(String user, Scanner console, ProfileManager socialNetwork) {
         int modifyMode = -1;
@@ -110,7 +121,7 @@ public class Main {
 
             switch (modifyMode) {
                 case 1:
-                    changeName(user, console, socialNetwork);
+                    user = changeName(user, console, socialNetwork);
                     break;
                 case 2:
                     changePicture(user, console, socialNetwork);
@@ -121,14 +132,16 @@ public class Main {
                 case 0:
                     break;
                 default:
-                    System.out.print("Please choose an option 1-3 or 0 to quit: ");
+                    System.out.println("Please choose an option 1-3 or 0 to quit.");
+                    System.out.println();
+                    break;
             }
 
         } while (modifyMode != 0);
 
     }
 
-    private static void changeName(String user, Scanner console, ProfileManager socialNetwork) {
+    private static String changeName(String user, Scanner console, ProfileManager socialNetwork) {
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         String newName = "";
         do {
@@ -145,6 +158,7 @@ public class Main {
 
         Profile userProfile = socialNetwork.getProfile(user);
         userProfile.setName(newName);
+        return newName;
     }
 
     private static void changePicture(String user, Scanner console, ProfileManager socialNetwork) {
@@ -176,7 +190,6 @@ public class Main {
         System.out.println("--- Add A Friend ---");
         System.out.println("Current Friendships: ");
         socialNetwork.displayCurrentUsersFriends(user);
-
         System.out.println();
         System.out.println();
 
@@ -228,14 +241,13 @@ public class Main {
     }
 
 
-    public static void createProfile(Scanner console, ProfileManager socialNetwork) {
+    public static String createProfile(Scanner console, ProfileManager socialNetwork) {
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println("--- Create Profile ---");
-        System.out.println();
 
         String name = "";
         do {
-            System.out.println("Profile Name?  ");
+            System.out.print("Profile Name?  ");
             name = console.next();
             if (name.isEmpty() || name == null) {
                 System.out.println("Name cannot be empty or null");
@@ -244,13 +256,11 @@ public class Main {
             }
         } while (name.isEmpty() || name == null || allUsers.contains(name));
 
-        System.out.println();
-        System.out.print("Picture File Name (Optional, can leave blank)? ");
+        System.out.print("Picture File Name? ");
         String picture = console.next();
 
         String status = "";
         do {
-            System.out.println();
             System.out.print("Profile Status? ");
             status = console.next();
             if (status.isEmpty() || status == null) {
@@ -260,7 +270,7 @@ public class Main {
 
         Profile newProfile = new Profile(name, picture, status);
         socialNetwork.addProfile(newProfile);
-
+        return name;
     }
 
     //works
@@ -288,11 +298,22 @@ public class Main {
 
     //works
     public static String switchUser(Scanner console, ProfileManager socialNetwork) {
+        ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println("List of users: ");
         socialNetwork.displayProfiles();
         System.out.println();
         System.out.print("Switch to which user: ");
-        String user = console.next();
+        String user = "";
+        do {
+            user = console.next();
+            if (!allUsers.contains(user)) {
+                System.out.println("\n" + user +  " is not in the system.");
+                System.out.println("List of users: ");
+                socialNetwork.displayProfiles();
+                System.out.println();
+                System.out.print("Switch to which user: ");
+            }
+        } while (!allUsers.contains(user));
         return user;
     }
 
