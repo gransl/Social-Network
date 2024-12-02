@@ -13,11 +13,16 @@ class ProfileTest {
 
     @BeforeEach
     void setUp() {
-        profileOne = new Profile("Jim","Jim.PNG","ONLINE");
+        profileOne = new Profile("jim", "Jim","Jim.PNG","ONLINE");
     }
 
     @AfterEach
     void tearDown() {
+    }
+
+    @Test
+    void getUsername() {
+        assertEquals("jim",profileOne.getUsername());
     }
 
     @Test
@@ -37,13 +42,13 @@ class ProfileTest {
 
     @Test
     void getFriendsList() {
-        profileOne.addFriend("Angela");
-        profileOne.addFriend("Bob");
-        profileOne.addFriend("Sara");
+        profileOne.addFriend("angela");
+        profileOne.addFriend("bob");
+        profileOne.addFriend("sara");
 
-        assertEquals("Angela",profileOne.getFriendsList().get(0));
-        assertEquals("Bob",profileOne.getFriendsList().get(1));
-        assertEquals("Sara",profileOne.getFriendsList().get(2));
+        assertEquals("angela",profileOne.getFriendsList().get(0));
+        assertEquals("bob",profileOne.getFriendsList().get(1));
+        assertEquals("sara",profileOne.getFriendsList().get(2));
     }
 
     @Test

@@ -5,6 +5,8 @@ import java.util.ArrayList;
  * holding information about the user
  */
 public class Profile {
+    /** Username of the profile user */
+    private final String username;
     /** Name of the profile user */
     private String name;
     /** File Name for the profile picture */
@@ -20,7 +22,12 @@ public class Profile {
      * @param picture filename for the picture
      * @param status status string, cannot be empty or null.
      */
-    public Profile(String name, String picture, String status) {
+    public Profile(String username, String name, String picture, String status) {
+        if (username == null || username.isEmpty()) {
+            throw new IllegalArgumentException("Username cannot be null or empty");
+        }
+
+        this.username = username;
         setName(name);
         this.picture = picture;
         setStatus(status);
@@ -28,6 +35,15 @@ public class Profile {
     }
 
     // GETTER METHODS
+
+    /**
+     * Returns the username associated with the Profile
+     *
+     * @return username of the profile
+     */
+    public String getUsername() {
+        return username;
+    }
 
     /**
      * Returns the name associated with the Profile
@@ -115,20 +131,18 @@ public class Profile {
      * This method displays the profile information
      */
     public void displayInformation() {
+        System.out.println("Username: " + username);
         System.out.println("Name: " + name);
         System.out.println("Picture: " + picture);
         System.out.println("Status: " + status);
         System.out.println("Friends: " + friendsList);
     }
 
-    /**
-     * toString method
-     * @return String containing profile information
-     */
     @Override
     public String toString() {
         return "Profile{" +
-                "name='" + name + '\'' +
+                "username='" + username + '\'' +
+                ", name='" + name + '\'' +
                 ", picture='" + picture + '\'' +
                 ", status='" + status + '\'' +
                 ", friendsList=" + friendsList +

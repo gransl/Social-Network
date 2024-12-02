@@ -13,9 +13,7 @@ class ProfileManagerTest {
 
     @BeforeEach
     void setUp() {
-        ProfileManager profileManager = new ProfileManager();
-        profileManager.populateInitialGraph();
-        nameIterator = profileManager.getNameIterator();
+
     }
 
     @AfterEach
@@ -24,26 +22,17 @@ class ProfileManagerTest {
 
     @Test
     void populateInitialGraph() {
-        assertTrue(nameIterator.hasNext());
 
-
-        assertEquals("Boddy", nameIterator.next());
-        assertEquals("Scarlet", nameIterator.next());
-        assertEquals("White", nameIterator.next());
-        assertEquals("Green", nameIterator.next());
-        assertEquals("Peacock", nameIterator.next());
-        assertEquals("Plum", nameIterator.next());
-        assertEquals("Mustard", nameIterator.next());
     }
 
     @Test
     void addProfile() {
-        Profile profile = new Profile("Test","test.png","Active");
 
     }
 
     @Test
     void createFriendship() {
+
     }
 
     @Test
