@@ -114,7 +114,7 @@ public class ProfileManager {
     }
 
     public boolean createFriendship(String username1, String username2) {
-        if(users.contains(username1) && users.contains(username2)) {
+        if(users.contains(username1) && users.contains(username2) && !users.getValue(username1).getFriendsList().contains(username2)) {
             socialNetwork.addEdge(username1, username2);
             users.getValue(username1).addFriend(username2);
             users.getValue(username2).addFriend(username1);
@@ -153,6 +153,22 @@ public class ProfileManager {
         }
     }
 
+    public void displayCurrentUserFriendsUsername(String username) {
+        Profile profile = users.getValue(username);
+        ArrayList<String> friends = profile.getFriendsList();
+
+        if (!friends.isEmpty()) {
+            for (int i = 0; i < friends.size(); i++) {
+                if (i > 0) {
+                    System.out.print(", ");
+                }
+                System.out.print(users.getValue(friends.get(i)).getUsername());
+            }
+        } else {
+            System.out.println("No friends");
+        }
+    }
+
     public void displayCurrentUsersFriendsFriends(String username) {
         Profile userProfile = users.getValue(username);
         ArrayList<String> userFriends = userProfile.getFriendsList();
@@ -172,7 +188,7 @@ public class ProfileManager {
                     if (!friendsFriendsList.isEmpty()) {
                         friendsFriendsList.append(", ");
                     }
-                    friendsFriendsList.append(name);
+                    friendsFriendsList.append(users.getValue(name).getName());
                 }
             }
 
