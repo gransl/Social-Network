@@ -24,7 +24,7 @@ public class Profile {
      */
     public Profile(String username, String name, String picture, String status) {
         if (username == null || username.isEmpty() || username.matches("\\d+")) {
-            throw new IllegalArgumentException("Username cannot be null, empty, or contain numbers");
+            throw new IllegalArgumentException("Username cannot be null, empty, or contains only numbers");
         }
 
         this.username = username;
