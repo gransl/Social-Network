@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -14,12 +13,20 @@ public class Main {
         menu(console, profileName, socialNetwork);
     }
 
+
+    /**
+     * This is the main menu that lets us navigate an instance of ProfileManager.
+     * @param console receives user input
+     * @param username current user's username
+     * @param socialNetwork this instance of profileManger
+     */
     public static void menu(Scanner console, String username, ProfileManager socialNetwork) {
+        //Get current users Profile
         Profile userProfile = socialNetwork.getProfile(username);
         //variables
         int mode = -1;
 
-        //menu
+        //Display menu options
         do {
             System.out.println();
             System.out.println("--- Social Network! ---");
@@ -44,6 +51,7 @@ public class Main {
             System.out.println("0. Logout (exit program)");
             System.out.print("Choose an option 1-9 or 0 to quit: ");
 
+            //Respond to bad user not inputting integers
             while (!console.hasNextInt()) {
                 console.next();
                 System.out.println();
@@ -54,6 +62,7 @@ public class Main {
             mode = console.nextInt();
             System.out.println();
 
+            //Switch statements for menu options
             switch(mode) {
                 case 1:
                     viewProfile(username, socialNetwork, console);
@@ -93,6 +102,14 @@ public class Main {
         System.out.println("Thank you for using Social Network! Goodbye!");
     }
 
+
+    /**
+     * Displays current user's profile.
+     *
+     * @param console receives user input
+     * @param username current user's username
+     * @param socialNetwork this instance of profileManger
+     */
     public static void viewProfile(String username, ProfileManager socialNetwork, Scanner console) {
         Profile currentUser = socialNetwork.getProfile(username);
         System.out.println("--- " + currentUser.getName() + "'s Profile ---");
@@ -101,6 +118,12 @@ public class Main {
         returnToMainMenu(console);
     }
 
+    /**
+     * Allows user to modify fields in their profile.
+     * @param username current user's username
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     */
     public static void modifyProfile(String username, Scanner console, ProfileManager socialNetwork) {
         int modifyMode = -1;
         System.out.println("--- Modify Profile ---");
@@ -145,7 +168,13 @@ public class Main {
         } while (modifyMode != 0);
     }
 
-    private static String changeName(String username, Scanner console, ProfileManager socialNetwork) {
+    /**
+     * private helper method for modifyProfile - changes user's Name
+     * @param console receives user input
+     * @param username current user's username
+     * @param socialNetwork this instance of profileManger
+     */
+    private static void changeName(String username, Scanner console, ProfileManager socialNetwork) {
         Profile userProfile = socialNetwork.getProfile(username);
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         String newName = "";
@@ -162,11 +191,16 @@ public class Main {
         } while (newName.isEmpty() || newName == null);
 
         userProfile.setName(newName);
-        return newName;
     }
 
-    private static void changePicture(String user, Scanner console, ProfileManager socialNetwork) {
-        Profile userProfile = socialNetwork.getProfile(user);
+    /**
+     * private helper method for modifyProfile - changes user's picture file name
+     * @param username current user's username
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     */
+    private static void changePicture(String username, Scanner console, ProfileManager socialNetwork) {
+        Profile userProfile = socialNetwork.getProfile(username);
         System.out.println("Current Picture File Name: " + userProfile.getPicture());
         System.out.println("(Re-enter current picture file name to exit without making changes)");
         System.out.print("New Picture File Name: ");
@@ -174,8 +208,14 @@ public class Main {
         userProfile.setPicture(newPicture);
     }
 
-    private static void changeStatus(String user, Scanner console, ProfileManager socialNetwork) {
-        Profile userProfile = socialNetwork.getProfile(user);
+    /**
+     * private helper method for modifyProfile - changes user's status
+     * @param username current user's username
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     */
+    private static void changeStatus(String username, Scanner console, ProfileManager socialNetwork) {
+        Profile userProfile = socialNetwork.getProfile(username);
         String newStatus = "";
         do {
             System.out.println("Current Profile Status: " + userProfile.getStatus());
@@ -189,15 +229,20 @@ public class Main {
         } while (newStatus.isEmpty() || newStatus == null);
 
         userProfile.setStatus(newStatus);
-
     }
 
-    public static void addFriend(String user, Scanner console, ProfileManager socialNetwork) {
-        String[] notYetFriends = createNotFriendsList(socialNetwork, user);
+    /**
+     * Creates a friendship between current user and another person in the social network.
+     * @param username current user's username
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     */
+    public static void addFriend(String username, Scanner console, ProfileManager socialNetwork) {
+        String[] notYetFriends = createNotFriendsList(socialNetwork, username);
 
         System.out.println("--- Add A Friend ---");
         System.out.println("Current Friendships: ");
-        socialNetwork.displayCurrentUsersFriends(user);
+        socialNetwork.displayCurrentUsersFriends(username);
         System.out.println();
         System.out.println();
 
@@ -205,13 +250,13 @@ public class Main {
             System.out.println("You are already friends with everyone in the network!");
         } else {
             System.out.println("Possible New Friends: ");
-            System.out.println(Arrays.toString(notYetFriends));
+            socialNetwork.availableFriends(username);
             System.out.println();
             System.out.print("Who do you want create a friendship with? ");
             String friend = console.next();
-            boolean didFriendshipCreate = socialNetwork.createFriendship(user, friend);
+            boolean didFriendshipCreate = socialNetwork.createFriendship(username, friend);
             if (didFriendshipCreate) {
-                System.out.println("Link Successful. " + user + " and " + friend + " are now friends.");
+                System.out.println("Link Successful. " + username + " and " + friend + " are now friends.");
             } else {
                 System.out.println("Link Unsuccessful. New friend must be an existing user and not currently a friend.");
             }
@@ -219,6 +264,12 @@ public class Main {
         returnToMainMenu(console);
     }
 
+    /**
+     * private helper
+     * @param socialNetwork
+     * @param user
+     * @return
+     */
     private static String[] createNotFriendsList(ProfileManager socialNetwork, String user){
         // Populate List of Potential New Friends
         // Does not include self and current friends
