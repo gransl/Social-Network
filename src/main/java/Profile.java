@@ -23,8 +23,8 @@ public class Profile {
      * @param status status string, cannot be empty or null.
      */
     public Profile(String username, String name, String picture, String status) {
-        if (username == null || username.isEmpty()) {
-            throw new IllegalArgumentException("Username cannot be null or empty");
+        if (username == null || username.isEmpty() || username.matches("\\d+")) {
+            throw new IllegalArgumentException("Username cannot be null, empty, or contain numbers");
         }
 
         this.username = username;
