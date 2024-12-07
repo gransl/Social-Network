@@ -6,14 +6,28 @@ import ADTPackage.ListWithIteratorInterface;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+/**
+ * Creates a Vertex object usable in Graph Classes
+ * @param <T> generic of type T
+ */
 class Vertex<T> implements VertexInterface<T>
 {
+    /** data to be stored in vertex*/
     private T label;
-    private ListWithIteratorInterface<Edge> edgeList; // Edges to neighbors
-    private boolean visited;                          // True if visited
-    private VertexInterface<T> previousVertex;        // On path to this vertex
-    private double cost;                              // Of path to this vertex
+    /** Edges to neighbors */
+    private ListWithIteratorInterface<Edge> edgeList;
+    /** True if visited */
+    private boolean visited;
+    /** On path to this vertex */
+    private VertexInterface<T> previousVertex;
+    /** Of path to this vertex */
+    private double cost;
 
+    /**
+     * Full constructor
+     *
+     * @param vertexLabel data to be stored in vertex
+     */
     public Vertex(T vertexLabel)
     {
         label = vertexLabel;
@@ -23,71 +37,126 @@ class Vertex<T> implements VertexInterface<T>
         cost = 0;
     } // end constructor
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     // Ex 8 from here to ....
     public T getLabel()
     {
         return label;
     } // end getLabel
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean hasPredecessor()
     {
         return previousVertex != null;
     } // end hasPredecessor
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void setPredecessor(VertexInterface<T> predecessor)
     {
         previousVertex = predecessor;
     } // end setPredecessor
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public VertexInterface<T> getPredecessor()
     {
         return previousVertex;
     } // end getPredecessor
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void visit()
     {
         visited = true;
     } // end visit
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void unvisit()
     {
         visited = false;
     } // end unvisit
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean isVisited()
     {
         return visited;
     } // end isVisited
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public double getCost()
     {
         return cost;
     } // end getCost
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void setCost(double newCost)
     {
         cost = newCost;
     } // end setCost
 
+    /**
+     * Returns Vertex's label as a string.
+     * @return a string representation of the vertex
+     */
     public String toString()
     {
         return label.toString();
     } // end toString
 
+    /**
+     * Private Inner WeightIterator Class. Provides an iteration for the weights of edges.
+     */
     private class WeightIterator implements Iterator<Double>
     {
+        /** Iterator of all edges for the Vertex*/
         private Iterator<Edge> edges;
 
+        /**
+         * Constructor
+         */
         private WeightIterator()
         {
             edges = edgeList.getIterator();
         } // end default constructor
 
+        /**
+         * Determines if there is another edge in the iteration.
+         * @return true if there is another edge in the iteration, false otherwise.
+         */
         public boolean hasNext()
         {
             return edges.hasNext();
         } // end hasNext
 
+        /**
+         * Returns the next edge in the iteration.
+         * @return the next edge in the iteration.
+         */
         public Double next()
         {
             Double edgeWeight = 0.0;
@@ -102,18 +171,29 @@ class Vertex<T> implements VertexInterface<T>
             return edgeWeight;
         } // end next
 
+        /**
+         * Removes an edge. Currently unsupported.
+         */
         public void remove()
         {
             throw new UnsupportedOperationException();
         } // end remove
     } // end WeightIterator
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Iterator<Double> getWeightIterator()
     {
         return new WeightIterator();
     } // end getWeightIterator
 // . . . to here Ex 8
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean connect(VertexInterface<T> endVertex, double edgeWeight)
     {
         boolean result = false;
@@ -140,21 +220,37 @@ class Vertex<T> implements VertexInterface<T>
         return result;
     } // end connect
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean connect(VertexInterface<T> endVertex)
     {
         return connect(endVertex, 0);
     } // end connect
 
+    /**
+     *{@inheritDoc}
+     */
+    @Override
     public Iterator<VertexInterface<T>> getNeighborIterator()
     {
         return new NeighborIterator();
     } // end getNeighborIterator
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean hasNeighbor()
     {
         return !edgeList.isEmpty();
     } // end hasNeighbor
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public VertexInterface<T> getUnvisitedNeighbor()
     {
         VertexInterface<T> result = null;
@@ -171,7 +267,12 @@ class Vertex<T> implements VertexInterface<T>
     } // end getUnvisitedNeighbor
 
 
-
+    /**
+     * Compares if a vertex is equal to a given parameter.
+     * @param other other object to compare against
+     * @return if this vertex is equal to parameter object
+     */
+    @Override
     public boolean equals(Object other)
     {
         boolean result;
@@ -189,20 +290,35 @@ class Vertex<T> implements VertexInterface<T>
         return result;
     } // end equals
 
+    /**
+     * Iterator for this Vertex's neighbor
+     */
     private class NeighborIterator implements Iterator<VertexInterface<T>>
     {
+        /** an iterator for the edges associated with this vertex*/
         private Iterator<Edge> edges;
 
+        /**
+         * Full constructor
+         */
         private NeighborIterator()
         {
             edges = edgeList.getIterator();
         } // end default constructor
 
+        /**
+         * Determines if there is another edge in the iteration
+         * @return true if there is another edge in the iteration, false otherwise.
+         */
         public boolean hasNext()
         {
             return edges.hasNext();
         } // end hasNext
 
+        /**
+         * Returns the next edge in the iteration
+         * @return the next edge in the iteration
+         */
         public VertexInterface<T> next()
         {
             VertexInterface<T> nextNeighbor = null;
@@ -218,40 +334,70 @@ class Vertex<T> implements VertexInterface<T>
             return nextNeighbor;
         } // end next
 
+        /**
+         * Can remove an edge. Currently an unsupported operation.
+         */
         public void remove()
         {
             throw new UnsupportedOperationException();
         } // end remove
     } // end NeighborIterator
 
+    /**
+     * Inner class Edge, allows vertex to connect to other vertices.
+     */
     protected class Edge
     {
-        private VertexInterface<T> vertex; // Vertex at end of edge
+        /** Vertex at end of edge */
+        private VertexInterface<T> vertex;
+        /** the weight of the edge */
         private double weight;
 
+        /**
+         * Full Constructor
+         *
+         * @param endVertex the other vertex that the edge connects to
+         * @param edgeWeight the weight we are assigning to the edge
+         */
         protected Edge(VertexInterface<T> endVertex, double edgeWeight)
         {
             vertex = endVertex;
             weight = edgeWeight;
         } // end constructor
 
+        /**
+         * Partial Constructor, for when edges do not have a weight
+         *
+         * @param endVertex the other vertex that the edge connects to
+         */
         protected Edge(VertexInterface<T> endVertex)
         {
             vertex = endVertex;
             weight = 0;
         } // end constructor
 
+        /**
+         * Gets the other vertex connected to this edge
+         * @return the other vertex this edge connects
+         */
         protected VertexInterface<T> getEndVertex()
         {
             return vertex;
         } // end getEndVertex
 
+        /**
+         * Returns the weight of the edge.
+         * @return the weight of the edge
+         */
         protected double getWeight()
         {
             return weight;
         } // end getWeight
     } // end Edge
 
+    /**
+     * Displays inforjation about the vertex
+     */
     public void display() // For testing
     {
         System.out.print(label + " " );
