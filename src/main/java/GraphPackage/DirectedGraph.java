@@ -4,28 +4,51 @@ import ADTPackage.*;
 
 import java.util.Iterator;
 
+/**
+ * Directed Graph data structure
+ * @param <T> generic of type T
+ */
 public class DirectedGraph<T> implements GraphInterface<T>
 {
+    /** dictionary of vertices */
     private DictionaryInterface<T, VertexInterface<T>> vertices;
+    /** number of edges in the graph */
     private int edgeCount;
 
+    /**
+     * Full Constructor
+     */
     public DirectedGraph()
     {
         vertices = new UnsortedLinkedDictionary<>();
         edgeCount = 0;
     } // end default constructor
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean addVertex(T vertexLabel)
     {
         VertexInterface<T> addOutcome = vertices.add(vertexLabel, new Vertex<>(vertexLabel));
         return addOutcome == null; // Was addition to dictionary successful?
     } // end addVertex
 
+    /**
+     * Removes a vertex from the graph
+     *
+     * @param vertexLabel label associated with vertex
+     * @return true if the vertex was removed, false otherwise
+     */
     public boolean removeVertex(T vertexLabel) {
         VertexInterface<T> removeOutcome = vertices.remove(vertexLabel);
         return removeOutcome != null; // Was the removal to dictionary successful?
     } // end removeVertex
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean addEdge(T begin, T end, double edgeWeight)
     {
         boolean result = false;
@@ -38,11 +61,19 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return result;
     } // end addEdge
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean addEdge(T begin, T end)
     {
         return addEdge(begin, end, 0);
     } // end addEdge
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean hasEdge(T begin, T end)
     {
         boolean found = false;
@@ -62,27 +93,46 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return found;
     } // end hasEdge
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public boolean isEmpty()
     {
         return vertices.isEmpty();
     } // end isEmpty
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public void clear()
     {
         vertices.clear();
         edgeCount = 0;
     } // end clear
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public int getNumberOfVertices()
     {
         return vertices.getSize();
     } // end getNumberOfVertices
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public int getNumberOfEdges()
     {
         return edgeCount;
     } // end getNumberOfEdges
 
+    /**
+     * private helper method for traversal methods
+     */
     protected void resetVertices()
     {
         Iterator<VertexInterface<T>> vertexIterator = vertices.getValueIterator();
@@ -95,6 +145,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         } // end while
     } // end resetVertices
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public QueueInterface<T> getBreadthFirstTraversal(T origin)
     {
         resetVertices();
@@ -120,6 +174,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return traversalOrder;
     } // end getBreadthFirstTraversal
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     // Exercise 10, Chapter 29
     public QueueInterface<T> getDepthFirstTraversal(T origin)
     {
@@ -151,6 +209,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return traversalOrder;
     } // end getDepthFirstTraversal
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public StackInterface<T> getTopologicalOrder()
     {
         resetVertices();
@@ -167,6 +229,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return vertexStack;
     } // end getTopologicalOrder
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public int getShortestPath(T begin, T end, StackInterface<T> path)
     {
         resetVertices();
@@ -214,6 +280,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return pathLength;
     } // end getShortestPath
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     // Exercise 15, Chapter 29
     /** Precondition: path is an empty stack (NOT null) */
     public double getCheapestPath(T begin, T end, StackInterface<T> path) // STUDENT EXERCISE
@@ -276,6 +346,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return pathCost;
     } // end getCheapestPath
 
+    /**
+     * returns the last vertex in a path
+     * @return last vertex in a path
+     */
     protected VertexInterface<T> findTerminal()
     {
         boolean found = false;
@@ -301,6 +375,9 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return result;
     } // end findTerminal
 
+    /**
+     * Displays Edges
+     */
     // Used for testing
     public void displayEdges()
     {
@@ -314,12 +391,24 @@ public class DirectedGraph<T> implements GraphInterface<T>
     } // end displayEdges
 
 
+    /**
+     * Creates object to work with priority queues for certain graph algorithms
+     */
     private class EntryPQ implements Comparable<EntryPQ>
     {
+        /** a vertex*/
         private VertexInterface<T> vertex;
+        /** vertex previous to this one*/
         private VertexInterface<T> previousVertex;
-        private double cost; // cost to nextVertex
+        /** cost to nextVertex */
+        private double cost;
 
+        /**
+         * Full constructor
+         * @param vertex a vertex
+         * @param cost the cost the path up until that point
+         * @param previousVertex the previous the vertex in the path
+         */
         private EntryPQ(VertexInterface<T> vertex, double cost, VertexInterface<T> previousVertex)
         {
             this.vertex = vertex;
@@ -327,21 +416,39 @@ public class DirectedGraph<T> implements GraphInterface<T>
             this.cost = cost;
         } // end constructor
 
+        /**
+         * returns the vertex
+         * @return the vertex
+         */
         public VertexInterface<T> getVertex()
         {
             return vertex;
         } // end getVertex
 
+        /**
+         * returns the previous vertex
+         * @return the previous vertex
+         */
         public VertexInterface<T> getPredecessor()
         {
             return previousVertex;
         } // end getPredecessor
 
+        /**
+         * returns the cost
+         * @return the cost
+         */
         public double getCost()
         {
             return cost;
         } // end getCost
 
+        /**
+         * compares two EntryPQs
+         * @param otherEntry the object to be compared.
+         * @return a positive number if this EntryPQ is larger than other Entry, a negative number if it is
+         * less than, and 0 if they are equal.
+         */
         public int compareTo(EntryPQ otherEntry)
         {
             // Using opposite of reality since our priority queue uses a maxHeap;
@@ -349,6 +456,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
             return (int)Math.signum(otherEntry.cost - cost);
         } // end compareTo
 
+        /**
+         * returns a string containing information about EntryPQ
+         * @return EntryPQ as a formatted String
+         */
         public String toString()
         {
             return vertex.toString() + " " + cost;

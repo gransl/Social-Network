@@ -396,7 +396,7 @@ class Vertex<T> implements VertexInterface<T>
     } // end Edge
 
     /**
-     * Displays inforjation about the vertex
+     * Displays information about the vertex
      */
     public void display() // For testing
     {
