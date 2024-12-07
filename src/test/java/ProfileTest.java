@@ -120,25 +120,28 @@ class ProfileTest {
 
     @Test
     void displayInformation() {
-        profileOne.addFriend("Angela");
+        // Arrange: Add friends to profileOne
+        profileOne.addFriend("Alice");
+        profileOne.addFriend("Bob");
 
-        //Save original out
-        PrintStream originalOut = System.out;
-
-        // Create ByteArrayOutputStream to capture the output
+        // Capture the output of displayInformation() to compare it with expected output
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-        PrintStream testOut =  new PrintStream(outputStream);
+        PrintStream originalSystemOut = System.out; // Save the original System.out
+        System.setOut(new PrintStream(outputStream)); // Redirect System.out to capture output
 
-        // Redirect System.out to testOut
-        System.setOut(testOut);
-
-        // Run method that prints code we want to test
+        // Act: Call the displayInformation method
         profileOne.displayInformation();
 
-        // Restore original System.out
-        System.setOut(System.out);
+        // Assert: Check the captured output
+        String expectedOutput = "Username: jim\n" +
+                "Name: Jim\n" +
+                "Picture: Jim.PNG\n" +
+                "Status: ONLINE\n" +
+                "Friends: [Alice, Bob]\n";
 
-        String testOutString = outputStream.toString();
-        assertEquals("Name: Jim\nPicture: Jim.PNG\nStatus: ONLINE\nFriends: [Angela]\n", testOutString);
+        assertEquals(expectedOutput, outputStream.toString());
+
+        // Restore the original System.out
+        System.setOut(originalSystemOut);
     }
 }
