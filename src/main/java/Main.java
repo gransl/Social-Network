@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -89,7 +88,7 @@ public class Main {
                     deleteProfile(username, console, socialNetwork);
                     break;
                 case 9:
-                    username = switchUser(console, socialNetwork);
+                    username = switchUser(username, console, socialNetwork);
                     userProfile = socialNetwork.getProfile(username);
                     break;
                 case 0:
@@ -176,12 +175,14 @@ public class Main {
      */
     private static void changeName(String username, Scanner console, ProfileManager socialNetwork) {
         Profile userProfile = socialNetwork.getProfile(username);
-        ArrayList<String> allUsers = socialNetwork.getAllNamesList();
-        String newName = "";
+        String newName;
         do {
             System.out.println("Current Profile Name: " + userProfile.getName());
-            System.out.println("(Re-enter current profile name to exit without making changes)");
-            System.out.print("New Profile Name: ");
+            System.out.print("Enter new profile name or 0 to quit to Modify Profile menu: ");
+            if (console.hasNextInt() && console.nextInt() == 0) {
+                System.out.println();
+                return;
+            }
             newName = console.next();
             if (newName.isEmpty() || newName == null) {
                 System.out.println("Profile name cannot be empty or null");
@@ -202,8 +203,11 @@ public class Main {
     private static void changePicture(String username, Scanner console, ProfileManager socialNetwork) {
         Profile userProfile = socialNetwork.getProfile(username);
         System.out.println("Current Picture File Name: " + userProfile.getPicture());
-        System.out.println("(Re-enter current picture file name to exit without making changes)");
-        System.out.print("New Picture File Name: ");
+        System.out.print("Enter new picture file name or 0 to quit to Modify Profile menu: ");
+        if (console.hasNextInt() && console.nextInt() == 0) {
+            System.out.println();
+            return;
+        }
         String newPicture = console.next();
         userProfile.setPicture(newPicture);
     }
@@ -216,11 +220,14 @@ public class Main {
      */
     private static void changeStatus(String username, Scanner console, ProfileManager socialNetwork) {
         Profile userProfile = socialNetwork.getProfile(username);
-        String newStatus = "";
+        String newStatus;
         do {
             System.out.println("Current Profile Status: " + userProfile.getStatus());
-            System.out.println("(Re-enter current profile status to exit without making changes)");
-            System.out.print("New Profile Status: ");
+            System.out.print("Enter new profile status or 0 to quit to Modify Profile menu: ");
+            if (console.hasNextInt() && console.nextInt() == 0) {
+                System.out.println();
+                return;
+            }
             newStatus = console.next();
             if (newStatus.isEmpty() || newStatus == null) {
                 System.out.println("Profile Status cannot be empty or null.");
@@ -238,94 +245,103 @@ public class Main {
      * @param socialNetwork this instance of profileManger
      */
     public static void addFriend(String username, Scanner console, ProfileManager socialNetwork) {
-        String[] notYetFriends = createNotFriendsList(socialNetwork, username);
-
         System.out.println("--- Add A Friend ---");
+
+        //Displays current user's friendships
         System.out.println("Current Friendships: ");
         socialNetwork.displayCurrentUsersFriends(username);
         System.out.println();
         System.out.println();
 
-        if (notYetFriends.length < 1) {
-            System.out.println("You are already friends with everyone in the network!");
-        } else {
-            System.out.println("Possible New Friends: ");
-            socialNetwork.availableFriends(username);
-            System.out.println();
-            System.out.print("Who do you want create a friendship with? ");
-            String friend = console.next();
-            boolean didFriendshipCreate = socialNetwork.createFriendship(username, friend);
-            if (didFriendshipCreate) {
-                System.out.println("Link Successful. " + username + " and " + friend + " are now friends.");
-            } else {
-                System.out.println("Link Unsuccessful. New friend must be an existing user and not currently a friend.");
-            }
+        //Displays all usernames current user is not friends with
+        System.out.println("Possible New Friends usernames: ");
+        socialNetwork.availableFriends(username);
+        System.out.println();
+
+        //Create Friendship or quit to main
+        System.out.println("Who do you want create a friendship with?");
+        System.out.println("Enter their username or 0 to quit to main menu: ");
+        if (console.hasNextInt() && console.nextInt() == 0) {
+            return;
         }
-        returnToMainMenu(console);
+        String friend = console.next();
+        System.out.println(friend);
+
+        //Check if friendship was created and give user this information
+        boolean didFriendshipCreate = socialNetwork.createFriendship(username, friend);
+        if (didFriendshipCreate) {
+            System.out.println("Link Successful. " + username + " and " + friend + " are now friends.");
+        } else {
+            System.out.println("Link Unsuccessful. New friend must be an existing user and not currently a friend.");
+        }
+
+        returnToMainMenu(console); // Controls flow of program so main menu doesn't appear right away
     }
 
     /**
-     * private helper
-     * @param socialNetwork
-     * @param user
-     * @return
+     * Displays all current user's friends.
+     * @param username current user's username
+     * @param socialNetwork this instance of profileManger
+     * @param console receives user input
      */
-    private static String[] createNotFriendsList(ProfileManager socialNetwork, String user){
-        // Populate List of Potential New Friends
-        // Does not include self and current friends
-        ArrayList<String> userFriends = socialNetwork.getFriendsList(user);
-        Iterator<String> userItr = socialNetwork.getNameIterator();
-        ArrayList<String> notFriends = new ArrayList<>();
-
-        while (userItr.hasNext()) {
-            String nextUser = userItr.next();
-            if (nextUser != user && !userFriends.contains(nextUser)) {
-                notFriends.add(nextUser);
-            }
-        }
-
-        return notFriends.toArray(new String[notFriends.size()]);
-    }
-
-    //works
-    public static void viewFriends(String user, ProfileManager socialNetwork, Scanner console) {
-        System.out.println("--- " + user + "'s Friends List ---");
-        socialNetwork.displayCurrentUsersFriends(user);
+    public static void viewFriends(String username, ProfileManager socialNetwork, Scanner console) {
+        Profile userProfile = socialNetwork.getProfile(username);
+        System.out.println("--- " + userProfile.getName() + "'s Friends List ---");
+        socialNetwork.displayCurrentUsersFriends(username);
         System.out.println();
-        returnToMainMenu(console);
+        System.out.println();
+        returnToMainMenu(console); // Controls flow of program so main menu doesn't appear right away
     }
 
-    //works
-    public static void viewFriendsFriends(String user, ProfileManager socialNetwork, Scanner console) {
-        System.out.println("--- " + user + "'s Friends' Friends List ---");
-        socialNetwork.displayCurrentUsersFriendsFriends(user);
-        returnToMainMenu(console);
+    /**
+     * Displays all current user's friends' friend lists.
+     * @param username current user's username
+     * @param socialNetwork this instance of profileManger
+     * @param console receives user input
+     */
+    public static void viewFriendsFriends(String username, ProfileManager socialNetwork, Scanner console) {
+        Profile userProfile = socialNetwork.getProfile(username);
+        System.out.println("--- " + userProfile.getName() + "'s Friends' Friends List ---");
+        socialNetwork.displayCurrentUsersFriendsFriends(username);
+        returnToMainMenu(console); // Controls flow of program so main menu doesn't appear right away
     }
 
-
-    public static String createProfile(Scanner console, ProfileManager socialNetwork) {
+    /**
+     * Allows user to creat a new profile in the network.
+     * @param socialNetwork this instance of profileManger
+     * @param console receives user input
+     */
+    public static void createProfile(Scanner console, ProfileManager socialNetwork) {
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println();
         System.out.println("--- Create Profile ---");
+        System.out.println("Can type 0 at anytime to quit to main menu.\n");
 
         //Prompts the user to create a unique username
-        String username = "";
+        String username;
         do {
+
             System.out.println("Create Profile User Name.");
             System.out.println("This will be a unique handle to identify your account in the network.");
+            System.out.println("Must contain characters other than numbers.\n");
+
+
             System.out.print("Profile User Name?  ");
-            username = console.next();
-            if (username.isEmpty() || username == null) {
-                System.out.println("Name cannot be empty or null");
-            } else if (allUsers.contains(username)) {
-                System.out.println("Name already exists in network");
+            if (console.hasNextInt() && console.nextInt() == 0) {
+                System.out.println("Create profile aborted. No new profile added.");
+                return;
             }
-        } while (username.isEmpty() || username == null || allUsers.contains(username));
+            username = checkUsername(console, allUsers);
+        } while (username.isEmpty() || username == null || allUsers.contains(username) || username.matches("\\d+"));
 
         //Prompts the user to enter their name, does not need to be unique can be changed
-        String name = "";
+        String name;
         do {
             System.out.print("Your Name?  ");
+            if (console.hasNextInt() && console.nextInt() == 0) {
+                System.out.println("\nCreate profile aborted. No new profile added.");
+                return;
+            }
             name = console.next();
             if (name.isEmpty() || name == null) {
                 System.out.println("Name cannot be empty or null");
@@ -334,12 +350,20 @@ public class Main {
 
         //Prompts user to enter a file name for their picture
         System.out.print("Picture File Name? ");
+        if (console.hasNextInt() && console.nextInt() == 0) {
+            System.out.println("\nCreate profile aborted. No new profile added.");
+            return;
+        }
         String picture = console.next();
 
         //Prompts user to enter a profile status
-        String status = "";
+        String status;
         do {
             System.out.print("Profile Status? ");
+            if (console.hasNextInt() && console.nextInt() == 0) {
+                System.out.println("\nCreate profile aborted. No new profile added.");
+                return;
+            }
             status = console.next();
             if (status.isEmpty() || status == null) {
                 System.out.println("Status cannot be empty or null.");
@@ -353,46 +377,73 @@ public class Main {
             System.out.println("Profile successfully added.");
         }
 
-        //Since this has a return value, specialized return to main
-        System.out.print("Choose 0 and press Enter to return to main menu: ");
-        int menuMode;
-        do {
-            while (!console.hasNextInt()) {
-                console.next();
-                System.out.print("Invalid choice. Choose 0 and Press Enter to return to main menu: ");
-            }
-
-            menuMode = console.nextInt();
-            if (menuMode == 0) {
-                System.out.println("Returning to main menu...");
-                return username;
-            } else {
-                System.out.print("Invalid choice. Choose 0 and Press Enter to return to main menu: ");
-            }
-        } while (true);
+        returnToMainMenu(console);
     }
 
-    //works
+
+    /**
+     * checks to make sure username fits the parameters
+     * @param console receives user input
+     * @param allUsers all users in the network
+     * @return
+     */
+    private static String checkUsername(Scanner console, ArrayList<String> allUsers) {
+        String username = console.next();
+        if (username.isEmpty() || username == null) {
+            System.out.println("Name cannot be empty or null.");
+        } else if (allUsers.contains(username)) {
+            System.out.println("Name already exists in network. Must choose a unique username.\n");
+
+        } else if (username.matches("\\d+")) {
+            System.out.println("Name cannot contain only digits.\n");
+        }
+        return username;
+    }
+
+    /**
+     * Displays all usernames currently in the network.
+
+     * @param socialNetwork this instance of profileManger
+     * @param console receives user input
+     */
     public static void viewAllProfiles(ProfileManager socialNetwork, Scanner console) {
         System.out.println("--- All Profiles in Social Network! ---");
         socialNetwork.displayProfiles();
         System.out.println();
-        returnToMainMenu(console);
+        System.out.println();
+        returnToMainMenu(console); // Controls flow of program so main menu doesn't appear right away
     }
 
-    //works
+    /**
+     * Deletes a profile in the network.
+     *
+     * @param username current user's username
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     */
     public static void deleteProfile(String username, Scanner console, ProfileManager socialNetwork) {
+        //Title
         System.out.println("--- Delete Profile ---");
         System.out.println("Current user: " + username);
         System.out.println();
+
+        //Display current profiles in the network
         System.out.println("Current profiles in network: ");
         socialNetwork.displayProfiles();
         System.out.println();
 
-        String userToDelete = "";
-        System.out.print("\nWhich profile would you like to delete? ");
+
+        String userToDelete;
+        System.out.println("\nWhich profile would you like to delete?");
+        System.out.print("Enter username to delete or 0 to quit to main menu: ");
+        if (console.hasNextInt() && console.nextInt() == 0) {
+            System.out.println();
+            return;
+        }
         userToDelete = console.next();
 
+        //If user tries to delete the profile that is currently logged in, it double-checks this action, and logs the
+        //user out after deletion if they continue.
         if (userToDelete.equals(username)) {
             int mode = -1;
             do {
@@ -413,7 +464,6 @@ public class Main {
 
                 switch (mode) {
                     case 1:
-                        boolean didUserDelete = socialNetwork.removeProfile(userToDelete);
                         System.out.println(userToDelete + " was successfully removed.");
                         System.out.println("Logging " + userToDelete + " out.");
                         System.exit(0);
@@ -425,7 +475,7 @@ public class Main {
                         break;
                 }
             } while (mode != 0);
-        } else {
+        } else { // deleting another profile in the network.
             boolean didUserDelete = socialNetwork.removeProfile(userToDelete);
             if (didUserDelete) {
                 System.out.println(userToDelete + " was successfully removed.");
@@ -433,30 +483,52 @@ public class Main {
                 System.out.println("User " + userToDelete + " not found. No deletion executed.");
             }
         }
-        returnToMainMenu(console);
+        returnToMainMenu(console); // Controls flow of program so main menu doesn't appear right away
     }
 
-    //works
-    public static String switchUser(Scanner console, ProfileManager socialNetwork) {
+
+    /**
+     * Switches the current user of the network.
+     *
+     * @param username current user
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     * @return username of user being switched to
+     */
+    public static String switchUser(String username, Scanner console, ProfileManager socialNetwork) {
+        System.out.println("--- Switch user ---");
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println("List of users: ");
         socialNetwork.displayProfiles();
         System.out.println();
-        System.out.print("Switch to which user: ");
-        String user = "";
+        System.out.print("Switch to which user or 0 to quit to main menu: ");
+        if (console.hasNextInt() && console.nextInt() == 0) {
+            System.out.println();
+            return username;
+        }
+        String newUsername;
         do {
-            user = console.next();
-            if (!allUsers.contains(user)) {
-                System.out.println("\n" + user +  " is not in the system.");
+            if (console.hasNextInt() && console.nextInt() == 0) {
+                System.out.println();
+                return username;
+            }
+            newUsername = console.next();
+            if (!allUsers.contains(newUsername)) {
+                System.out.println("\n" + newUsername +  " is not in the system.");
                 System.out.println("List of users: ");
                 socialNetwork.displayProfiles();
                 System.out.println();
-                System.out.print("Switch to which user: ");
+                System.out.print("Switch to which user or 0 to quit to main menu: ");
             }
-        } while (!allUsers.contains(user));
-        return user;
+        } while (!allUsers.contains(newUsername));
+        return newUsername;
     }
 
+    /**
+     * Private helper function that helps control the flow of the program. Prompts user to press a key to return
+     * to the main menu instead of having it automatically appear.
+     * @param console receives user input
+     */
     private static void returnToMainMenu(Scanner console) {
         System.out.print("Choose 0 and press Enter to return to main menu: ");
         int menuMode;
@@ -476,27 +548,30 @@ public class Main {
         } while (true);
     }
 
+    /**
+     * Separate method to for first time profile creation as it has different return type and slightly different wording
+     * for some actions.
+     * @param console receives user input
+     * @param socialNetwork this instance of profileManger
+     * @return username of profile created
+     */
     public static String createProfileFirstTime(Scanner console, ProfileManager socialNetwork) {
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println();
         System.out.println("--- Create Profile ---");
 
         //Prompts the user to create a unique username
-        String username = "";
+        String username;
         do {
             System.out.println("Create Profile User Name.");
             System.out.println("This will be a unique handle to identify your account in the network.");
+            System.out.println("Must contain characters other than numbers.\n");
             System.out.print("Profile User Name?  ");
-            username = console.next();
-            if (username.isEmpty() || username == null) {
-                System.out.println("Name cannot be empty or null");
-            } else if (allUsers.contains(username)) {
-                System.out.println("Name already exists in network");
-            }
-        } while (username.isEmpty() || username == null || allUsers.contains(username));
+            username = checkUsername(console, allUsers);
+        } while (username.isEmpty() || username == null || allUsers.contains(username) || username.matches("\\d+"));
 
         //Prompts the user to enter their name, does not need to be unique can be changed
-        String name = "";
+        String name;
         do {
             System.out.print("Your Name?  ");
             name = console.next();
@@ -510,7 +585,7 @@ public class Main {
         String picture = console.next();
 
         //Prompts user to enter a profile status
-        String status = "";
+        String status;
         do {
             System.out.print("Profile Status? ");
             status = console.next();
