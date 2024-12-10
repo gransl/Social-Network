@@ -18,6 +18,7 @@ public class Profile {
 
     /**
      * Full Constructor
+     * @param username username of the Profile, cannot be empty or null, or consist of only digits
      * @param name name of the Profile, cannot be empty or null.
      * @param picture filename for the picture
      * @param status status string, cannot be empty or null.

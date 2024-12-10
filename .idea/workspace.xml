@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/uml_diagram/Project 4_ UMLDiagram_and_NetworkGraph.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AD325-P4-SocialNetwork/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/AD325-P4-SocialNetwork/ProfileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/AD325-P4-SocialNetwork/ProfileTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProfileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProfileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uml_diagram/First Draft_ UML_P4.pdf" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SkyeHobbs&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gransl/AD325-P4-SocialNetwork.git&quot;,
+    &quot;accountId&quot;: &quot;d6a183c0-fc78-42ed-9b4b-5adad3be15d0&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2pEWkJGepnRNYkICNjJ4xs19Scd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.temp.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in AD325-P4-SocialNetwork.executor": "Coverage",
+    "JUnit.ProfileTest.addFriend.executor": "Run",
+    "JUnit.ProfileTest.executor": "Run",
+    "JUnit.ProfileTest.getFriendsList.executor": "Run",
+    "JUnit.ProfileTest.getName.executor": "Run",
+    "JUnit.ProfileTest.getPicture.executor": "Run",
+    "JUnit.ProfileTest.getStatus.executor": "Run",
+    "JUnit.ProfileTest.setName.executor": "Run",
+    "JUnit.ProfileTest.setPicture.executor": "Run",
+    "JUnit.ProfileTest.setStatus.executor": "Run",
+    "JUnit.ProfileTest.testToString.executor": "Run",
+    "JUnit.VertexTest.connectNoWeight.executor": "Coverage",
+    "JUnit.VertexTest.display.executor": "Coverage",
+    "JUnit.VertexTest.executor": "Coverage",
+    "JUnit.VertexTest.getAndSetCost.executor": "Coverage",
+    "JUnit.VertexTest.getLabel.executor": "Coverage",
+    "JUnit.VertexTest.getNeighborIterator.executor": "Coverage",
+    "JUnit.VertexTest.getPredecessor.executor": "Coverage",
+    "JUnit.VertexTest.getUnvisitedNeighbor.executor": "Coverage",
+    "JUnit.VertexTest.getWeightIterator.executor": "Coverage",
+    "JUnit.VertexTest.hasNeighbor.executor": "Coverage",
+    "JUnit.VertexTest.setAndHasPredecessor.executor": "Coverage",
+    "JUnit.VertexTest.testEquals.executor": "Coverage",
+    "JUnit.VertexTest.testToString.executor": "Coverage",
+    "JUnit.VertexTest.visitUnvisitAndIsVisited.executor": "Coverage",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/ren/Documents/CS/AD325/AD325-P4-SocialNetwork",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uml_diagram" />
+      <recent name="$PROJECT_DIR$/screenshots" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+      <recent name="GraphPackage" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="All in AD325-P4-SocialNetwork" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AD325-P4-SocialNetwork" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AD325-P4-SocialNetwork" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProfileTest.addFriend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AD325-P4-SocialNetwork" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProfileTest" />
+      <option name="METHOD_NAME" value="addFriend" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Python tests in java" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="AD325-P4-SocialNetwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test/java" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/test/java&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="AD325-P4-SocialNetwork" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in AD325-P4-SocialNetwork" />
+        <item itemvalue="Python tests.Python tests in java" />
+        <item itemvalue="Python tests.Python tests in test" />
+        <item itemvalue="JUnit.ProfileTest" />
+        <item itemvalue="JUnit.ProfileTest.addFriend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13b18b2c-9231-4638-93e3-298a47d0df8e" name="Changes" comment="" />
+      <created>1728925836223</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728925836223</updated>
+      <workItem from="1728925898661" duration="62000" />
+      <workItem from="1732331858020" duration="13635000" />
+      <workItem from="1732401095272" duration="7176000" />
+      <workItem from="1732558753891" duration="13000" />
+      <workItem from="1732558779918" duration="71000" />
+      <workItem from="1732558901855" duration="26000" />
+      <workItem from="1732558929329" duration="63628000" />
+      <workItem from="1733337564451" duration="40262000" />
+      <workItem from="1733807446136" duration="1885000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_connectNoWeight.ic" NAME="VertexTest.connectNoWeight Coverage Results" MODIFIED="1732342010950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_hasNeighbor.ic" NAME="VertexTest.hasNeighbor Coverage Results" MODIFIED="1732343612487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$All_in_AD325_P4_SocialNetwork.ic" NAME="All in AD325-P4-SocialNetwork Coverage Results" MODIFIED="1733807564711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getWeightIterator.ic" NAME="VertexTest.getWeightIterator Coverage Results" MODIFIED="1732343395886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_testToString.ic" NAME="VertexTest.testToString Coverage Results" MODIFIED="1732340181738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getAndSetCost.ic" NAME="VertexTest.getAndSetCost Coverage Results" MODIFIED="1732335757416" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_visitUnvisitAndIsVisited.ic" NAME="VertexTest.visitUnvisitAndIsVisited Coverage Results" MODIFIED="1732335637339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getPredecessor.ic" NAME="VertexTest.getPredecessor Coverage Results" MODIFIED="1732335301662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getUnvisitedNeighbor.ic" NAME="VertexTest.getUnvisitedNeighbor Coverage Results" MODIFIED="1732344605641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_testEquals.ic" NAME="VertexTest.testEquals Coverage Results" MODIFIED="1732342384849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_setAndHasPredecessor.ic" NAME="VertexTest.setAndHasPredecessor Coverage Results" MODIFIED="1732334940668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest.ic" NAME="VertexTest Coverage Results" MODIFIED="1732345130786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getLabel.ic" NAME="VertexTest.getLabel Coverage Results" MODIFIED="1732334673528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_getNeighborIterator.ic" NAME="VertexTest.getNeighborIterator Coverage Results" MODIFIED="1732344158914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AD325_P4_SocialNetwork$VertexTest_display.ic" NAME="VertexTest.display Coverage Results" MODIFIED="1732345711066" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>GraphPackage.*</FILTER>
+    </SUITE>
+  </component>
+</project>

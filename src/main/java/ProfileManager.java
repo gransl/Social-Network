@@ -4,8 +4,10 @@ import GraphPackage.UndirectedGraph;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Queue;
 
+/**
+ * Profile manager object creates a social network, suitable for social networks of a smaller size.
+ */
 public class ProfileManager {
     /** Unsorted Linked Dictionary storing profiles
      * with the key being the profiles username */

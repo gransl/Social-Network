@@ -265,7 +265,6 @@ public class Main {
             return;
         }
         String friend = console.next();
-        System.out.println(friend);
 
         //Check if friendship was created and give user this information
         boolean didFriendshipCreate = socialNetwork.createFriendship(username, friend);
@@ -315,22 +314,14 @@ public class Main {
         ArrayList<String> allUsers = socialNetwork.getAllNamesList();
         System.out.println();
         System.out.println("--- Create Profile ---");
-        System.out.println("Can type 0 at anytime to quit to main menu.\n");
 
         //Prompts the user to create a unique username
         String username;
         do {
-
             System.out.println("Create Profile User Name.");
             System.out.println("This will be a unique handle to identify your account in the network.");
             System.out.println("Must contain characters other than numbers.\n");
-
-
             System.out.print("Profile User Name?  ");
-            if (console.hasNextInt() && console.nextInt() == 0) {
-                System.out.println("Create profile aborted. No new profile added.");
-                return;
-            }
             username = checkUsername(console, allUsers);
         } while (username.isEmpty() || username == null || allUsers.contains(username) || username.matches("\\d+"));
 
